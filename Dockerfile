@@ -41,7 +41,7 @@ RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN gem install compass
 RUN php5enmod mcrypt
 
-RUN npm install -g bower grunt-cli gulp gulp-jshint gulp-uglify gulp-continuous-concat gulp-sass gulp-minify-css gulp-csslint gulp-watch
+RUN npm install -g bower grunt-cli gulp gulp-jshint gulp-uglify gulp-continuous-concat gulp-sass gulp-minify-css gulp-csslint gulp-watch grunt-cli
 
 RUN curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer
