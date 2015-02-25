@@ -41,7 +41,7 @@ RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN gem install compass
 RUN php5enmod mcrypt
 
-RUN npm install -g bower grunt-cli gulp gulp-jshint gulp-uglify gulp-continuous-concat gulp-sass gulp-minify-css gulp-csslint gulp-watch grunt grunt-cli && \
+RUN npm install -g bower grunt grunt-autoprefixer grunt-cli grunt-contrib-concat grunt-contrib-jshint grunt-contrib-sass grunt-contrib-uglify grunt-contrib-watch grunt-modernizr grunt-version grunt-wp-assets gulp gulp-concat gulp-continuous-concat gulp-csslint gulp-jshint gulp-minify-css gulp-sass gulp-uglify gulp-watch load-grunt-tasks time-grunt \
     npm install
 
 RUN curl -sS https://getcomposer.org/installer | php && \
