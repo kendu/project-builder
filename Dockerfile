@@ -41,7 +41,7 @@ RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN gem install compass
 RUN php5enmod mcrypt
 
-RUN npm install -g bower grunt \
+RUN npm install -g bower grunt gulp \
     npm install
 
 RUN curl -sS https://getcomposer.org/installer | php && \
