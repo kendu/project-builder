@@ -1,9 +1,10 @@
 # Project builder
 
-The image dor building project.
+The image for building web app resources.
 
 ## Tools:
 
+* node.js
 * bower
 * grunt
 * gulp
