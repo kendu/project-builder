@@ -69,7 +69,8 @@ RUN npm install -g \
         gulp-uglify \
         gulp-watch \
         load-grunt-tasks \
-        time-grunt
+        time-grunt \
+        raml2html
 
 RUN apt-get clean
 

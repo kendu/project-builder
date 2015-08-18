@@ -11,7 +11,8 @@ The image for building web app resources.
 * gulp
 * npm
 * composer
-
+* raml2html
+* 
 # Usage
 
 For interactive use run the container in the project directory
