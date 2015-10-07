@@ -49,28 +49,12 @@ RUN curl -sL https://deb.nodesource.com/setup | bash - && \
 RUN npm install -g \
         bower \
         grunt \
-        grunt-autoprefixer \
         grunt-cli \
-        grunt-contrib-concat \
-        grunt-contrib-jshint \
-        grunt-contrib-sass \
-        grunt-contrib-uglify \
-        grunt-contrib-watch \
-        grunt-modernizr \
-        grunt-version \
-        grunt-wp-assets \
         gulp \
-        gulp-concat \
-        gulp-continuous-concat \
-        gulp-csslint \
-        gulp-jshint \
-        gulp-minify-css \
-        gulp-sass \
-        gulp-uglify \
-        gulp-watch \
         load-grunt-tasks \
         time-grunt \
-        raml2html
+        raml2html \
+        elasticdump
 
 RUN apt-get clean
 
