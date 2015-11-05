@@ -6,10 +6,9 @@
 #    |  O        \___/  |¸
 #  ~^~^~^~^~^~^~^~^~^~^~^~^~
 #Project builder container by kendu
-FROM ubuntu
+FROM debian
 MAINTAINER DevOps <devops@kendu.si>
 USER root
-RUN locale-gen sl_SI.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
 
 # Ondřej Surý's PHP 5.6 packages
@@ -17,15 +16,14 @@ RUN echo "deb http://ppa.launchpad.net/ondrej/php5-5.6/ubuntu trusty main " \
        > /etc/apt/sources.list.d/ondrej.list ; \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E5267A6C
 
-RUN apt-get update
-RUN apt-get install -q -y \
+RUN apt-get update; \
+    apt-get install -q -y \
         git \
         curl \
         wget \
+        build-essential \
         make
-
-
-RUN apt-get install -q -y \
+RUN    apt-get install -q -y \
         php5 \
         php5-cli \
         php5-curl \
@@ -40,12 +38,9 @@ RUN apt-get install -q -y \
         php5-readline \
         php5-sqlite \
         ruby-full
-
-# Node.js official repo & update NPM to latest
-RUN curl -sL https://deb.nodesource.com/setup | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -; \
     apt-get install -y nodejs && \
     npm install -g npm
-
 RUN npm install -g \
         bower \
         grunt \
@@ -54,9 +49,8 @@ RUN npm install -g \
         load-grunt-tasks \
         time-grunt \
         raml2html \
-        elasticdump
-
-RUN apt-get clean
+        elasticdump; \
+    apt-get clean
 
 RUN gem install compass
 RUN php5enmod php5-mcrypt
