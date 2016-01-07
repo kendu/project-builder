@@ -26,7 +26,9 @@ RUN apt-get update; \
         npm \
         ruby-full
 
-RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -; \
+
+RUN ln -s /usr/bin/nodejs /usr/bin/node; \
+    curl -sL https://deb.nodesource.com/setup_4.x | bash -; \
     npm install -g npm
 RUN npm install -g \
     bower \
