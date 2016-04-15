@@ -38,6 +38,7 @@ RUN npm install -g \
     load-grunt-tasks \
     time-grunt \
     raml2html \
+    webpack \
     elasticdump; \
 apt-get clean
 
