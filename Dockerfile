@@ -25,9 +25,8 @@ RUN apt-get update; \
         npm \
         ruby-full
 
-
 RUN ln -s /usr/bin/nodejs /usr/bin/node; \
-    curl -sL https://deb.nodesource.com/setup_5.x | bash -; \
+    curl -sL https://deb.nodesource.com/setup_6.x | bash -; \
     apt-get install -y -q         nodejs; \
     npm install -g npm
 RUN npm install -g \
@@ -37,14 +36,11 @@ RUN npm install -g \
     gulp \
     load-grunt-tasks \
     time-grunt \
-    raml2html \
-    webpack \
-    elasticdump; \
+    raml2html; \
 apt-get clean
 
 RUN gem install compass
 RUN php5enmod php5-mcrypt
-
 
 RUN curl -sS https://getcomposer.org/installer | php && \
 mv composer.phar /usr/local/bin/composer
