@@ -36,6 +36,7 @@ RUN npm install -g \
     gulp \
     load-grunt-tasks \
     time-grunt \
+    webpack \
     raml2html; \
 apt-get clean
 
