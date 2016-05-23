@@ -41,7 +41,7 @@ RUN npm install -g \
 apt-get clean
 
 RUN gem install compass
-RUN php5enmod php5-mcrypt
+RUN phpenmod php5-mcrypt
 
 RUN curl -sS https://getcomposer.org/installer | php && \
 mv composer.phar /usr/local/bin/composer
