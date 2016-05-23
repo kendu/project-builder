@@ -8,7 +8,7 @@
 
 #################################---INFO---#####################################
 
-FROM kendu/php:5.6
+FROM kendu/php:7.0
 MAINTAINER devops@kendu.si
 
 ################################################################################
@@ -42,7 +42,7 @@ RUN npm install -g \
 apt-get clean
 
 RUN gem install compass
-RUN php5enmod php5-mcrypt
+RUN phpenmod mcrypt
 
 
 RUN curl -sS https://getcomposer.org/installer | php && \
